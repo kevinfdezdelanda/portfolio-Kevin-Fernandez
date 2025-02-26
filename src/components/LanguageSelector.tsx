@@ -5,7 +5,7 @@ const LanguageSelector: React.FC = () => {
   const { language, toggleLanguage } = useLanguage();
 
   return (
-    <button onClick={toggleLanguage} className='cursor-pointer p-1 hover:border-b-2'>
+    <button onClick={toggleLanguage} className='cursor-pointer p-1 hover:border-b-2 text-sm'>
       {language === 'es' ? 'EN' : 'ES'}
     </button>
   );

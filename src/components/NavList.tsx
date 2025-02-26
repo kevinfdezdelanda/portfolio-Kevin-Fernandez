@@ -1,6 +1,11 @@
-const NavList: React.FC<{ items: string[] }> = ({ items }) => {
+interface NavListProps {
+  items: string[];
+  classNames?: string;
+}
+
+const NavList: React.FC<NavListProps> = ({ items, classNames }) => {
   return (
-    <ul className="text-white flex justify-around items-center">
+    <ul className={`text-white flex justify-around items-center ${classNames}`}>
       {items.map((item, index) => (
         <li key={index} className="h-full flex">
           <a

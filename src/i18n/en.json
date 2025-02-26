@@ -1,10 +1,34 @@
 {
-  "nav": {
-    "about": "About Me",
-    "career": "Career",
-    "hardSkills": "Hard Skills",
-    "softSkills": "Soft Skills",
-    "projects": "Projects",
-    "contact": "Contact"
+    "comun": {
+      "name": "Kevin",
+      "lastName1": "Fernández de Landa",
+      "lastName2": "Gutierrez",
+      "age": "23",
+      "city": "Vitoria-Gasteiz",
+      "region": "Alava",
+      "country": "Spain",
+      "email": "kevinfdezdelanda@gmail.com",
+      "phone": "+34 637 91 40 78",
+      "position": "Fullstack & AI Developer",
+      "experience": "+2 years"
+    },
+    "nav": {
+      "about": "About Me",
+      "career": "Career",
+      "hardSkills": "Hard Skills",
+      "softSkills": "Soft Skills",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "home": {
+      "hello": "Hello!",
+      "presentation": "I am",
+      "experience": "of experience",
+      "description": "Developer focused on creating innovative and scalable solutions with a focus on artificial intelligence and web development. 🚀"
+    },
+    "buttons": {
+      "cv": "Download CV",
+      "chatbot": "Talk to me",
+      "contact": "Contact"
+    }
   }
-}
