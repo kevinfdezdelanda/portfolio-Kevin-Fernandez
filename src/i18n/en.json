@@ -1,0 +1,10 @@
+{
+  "nav": {
+    "about": "About Me",
+    "career": "Career",
+    "hardSkills": "Hard Skills",
+    "softSkills": "Soft Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  }
+}
