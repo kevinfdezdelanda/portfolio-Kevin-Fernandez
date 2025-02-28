@@ -4,20 +4,23 @@ import en from "../i18n/en.json";
 import es from "../i18n/es.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQuoteLeft, faStar } from "@fortawesome/free-solid-svg-icons";
-import kevinImage from "../assets/images/foto-home.png"; // Importa la imagen
+import kevinImage from "../assets/images/foto-home2.png"; // Importa la imagen
 
 const Home: React.FC = () => {
   const [hoverFoto, setHoverFoto] = useState(false);
   const [hoverBoton, setHoverBoton] = useState(false);
 
   const clasesBotonHover = "bg-orange-400 px-6 py-2 rounded-full font-bold";
-  const clasesBotonNoHover = "font-light py-2";
+  const clasesBotonNoHover = "font-light py-2 border-0";
 
   const { language } = useLanguage();
   const texts = language === "es" ? es : en;
 
   return (
-    <section className="container mx-auto min-h-screen flex flex-col items-center justify-center gap-7 pt-32 overflow-hidden">
+    <section
+      id="Section-0"
+      className="custom-container min-h-screen flex flex-col items-center justify-center gap-7 pt-32 overflow-hidden"
+    >
       <article
         className={`flex flex-col items-center gap-7 justify-center transition-all duration-300 ease-in-out ${
           hoverFoto ? "translate-y-92 opacity-0" : "-translate-y-0"
@@ -53,21 +56,22 @@ const Home: React.FC = () => {
         </article>
         {/* Imagen con botones */}
         <article
-          className="col-span-4  flex flex-col justify-end relative"
+          className="col-span-4  flex flex-col justify-end items-center relative h-[calc(100vh-48px-19rem)]"
           onMouseEnter={() => setHoverFoto(true)}
           onMouseLeave={() => setHoverFoto(false)}
         >
-          <div
-            className={`absolute w-4xl left-1/2 transform -translate-x-1/2 h-2/3 rounded-t-full bg-orange-300 transition-all duration-300 ease-in-out ${
-              hoverFoto ? "scale-150" : ""
-            }`}
-          ></div>
           <img
             src={kevinImage}
             alt="portrait of kevin fernandez"
-            className="absolute left-1/2 transform -translate-x-1/2 "
+            className={`h-full  object-cover trasnform transition-all duration-300 ease-in-out ${
+              hoverFoto ? "scale-[130%] order-last translate-y-[-23%]" : "scale-[124%] order-last translate-y-[-19%]" }`}
           />
-          <div className="z-10 flex justify-center transform -translate-y-12">
+          <div
+            className={`absolute w-full scale-150 left-1/2 transform -translate-x-1/2 translate-y-20 h-2/3 rounded-t-full bg-orange-300 transition-all duration-300 ease-in-out -z-10 ${
+              hoverFoto ? "scale-200" : ""
+            }`}
+          ></div>
+          <div className="absolute left-1/2 -translate-x-1/2  z-10 flex justify-center transform -translate-y-12 w-3xl">
             <div className="relative inline-flex gap-3 items-center justify-center mb-7 py-2 px-4 border border-white rounded-full text-white overflow-hidden">
               <button
                 className={`transition-all duration-300 ease-in-out z-10 ${

@@ -9,7 +9,7 @@ const NavList: React.FC<NavListProps> = ({ items, classNames }) => {
       {items.map((item, index) => (
         <li key={index} className="h-full flex">
           <a
-            href={'#'+index}
+            href={'#Section-'+(index+1)}
             className="hover:bg-gray-700 h-full flex items-center px-6 mx-4 rounded-full"
           >
             {item}

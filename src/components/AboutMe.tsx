@@ -2,17 +2,17 @@ import React from "react";
 import { useLanguage } from "../context/LanguageContext";
 import en from "../i18n/en.json";
 import es from "../i18n/es.json";
+import Button from "./Button";
+import SectionTitle from "./SectionTitle";
 
 const AboutMe: React.FC = () => {
   const { language } = useLanguage();
   const texts = language === "es" ? es : en;
 
   return (
-    <section id="AboutMe" className=" transform -translate-y-12 rounded-4xl ">
-      <article className="container mx-auto py-28 text-white flex flex-col gap-8">
-        <h2 className="text-4xl">
-          About <span className="text-orange-300 font-bold">Me</span>
-        </h2>
+    <section id="Section-1" className="about-me transform -translate-y-12 rounded-4xl ">
+      <article className="custom-container section-padding text-white flex flex-col gap-8">
+        <SectionTitle dark={true} text1={texts.AboutMe.title1} text2={texts.AboutMe.title2} ></SectionTitle>
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-4 border-b-2 border-gray-700 pb-8">
             <p>
@@ -39,25 +39,17 @@ const AboutMe: React.FC = () => {
           </div>
           <div className="flex max-w-4xl flex-col items-center justify-center gap-3 m-auto">
             <h3 className="text-xl text-orange-300">¿Alguna pregunta?</h3>
-            <div className="flex gap-4 items-center justify-center">
-              <div className="w-1/2 flex flex-col items-end justify-center gap-3 text-end border-r-2 border-gray-700 pr-4">
+            <div className="flex flex-col md:flex-row gap-4 items-center justify-center text-center">
+              <div className="md:w-1/2 flex flex-col items-center md:items-end justify-center gap-1 md:gap-3 md:text-end border-b-2 border-r-0 md:border-r-2 md:border-b-0 border-gray-700 md:pr-4 pb-4 md:pb-0">
                 <h4 className="">
                   Mi chatBot personalizado estara encantado de resolverte todas
                   las dudas
                 </h4>
-                <button className="bg-orange-400 rounded-full px-8 py-3 font-bold text-white mt-4 group w-48">
-                  <span className="inline-block transform transition-transform duration-300 ease-in-out group-hover:scale-110">
-                    {texts.buttons.chatbot}
-                  </span>
-                </button>
+                <Button onClick={() => {}} label={texts.buttons.chatbot} />
               </div>
-              <div className="w-1/2 flex flex-col items-start justify-center gap-3 text-start">
+              <div className="md:w-1/2 flex flex-col items-center md:items-start justify-center gap-1 md:gap-3 md:text-start">
                 <h4 className="">Contactame directamente, estare encantado de resolverte tus dudas</h4>
-                <button className="bg-orange-400 rounded-full px-8 py-3 font-bold text-white mt-4 group w-48">
-                  <span className="inline-block transform transition-transform duration-300 ease-in-out group-hover:scale-110">
-                    {texts.buttons.contact}
-                  </span>
-                </button>
+                <Button onClick={() => {}} label={texts.buttons.contact} />
               </div>
             </div>
           </div>

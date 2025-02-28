@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;600&display=swap');
 
 @import "tailwindcss";
+@import "tailwindcss/utilities";
+
+html {
+  font-size: 16px;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  scroll-behavior: smooth;
+}
 
 
 @theme {
@@ -8,11 +17,41 @@
   --color-secondary: #db643e;
 }
 
-*{
+* {
   font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-#AboutMe{
+.about-me{
   background: rgb(27,15,0);
   background: linear-gradient(90deg, rgba(27,15,0,1) 0%, rgba(1,1,1,1) 35%, rgba(32,20,0,1) 100%);
+}
+
+.custom-container {
+  @apply container mx-auto px-4  sm:px-6;
+}
+
+.section-padding {
+  @apply py-28;
+}
+
+/* Personalizar la scrollbar */
+::-webkit-scrollbar {
+  width: 6px; /* Tamaño de la barra de desplazamiento */
+  height: 6px; /* Para barras horizontales, si las tienes */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: orange; /* Color del pulgar de la scrollbar */
+  border-radius: 4px; /* Esquinas redondeadas */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color de la pista de la scrollbar */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent; /* Color de la esquina si existe */
 }
